@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ - Tech Tjek</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<header>
+    <h1>Tech Tjek</h1>
+    <p>Din hjælper til teknologiforståelse i folkeskolen</p>
+  </header>
+<nav>
+    <a href="index.html">Forside</a>
+   <a href="Materiale.html">Undervisningsmateriale</a>
+   <a href="AiHjaelper.html">AI Hjælper</a>
+   <a href="Forum.html">Forum</a>
+   <a href="Login.html">Login</a>
+  
+
+ </nav>
+<body>
+  <div class="faq-container">
+    <h1>Ofte stillede spørgsmål (FAQ)</h1>
+    
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleAnswer(this)">Hvad er TechTjek? &#x25BC;</div>
+      <div class="faq-answer">TechTjek er en platform, der hjælper lærere med at integrere teknologiforståelse i undervisningen.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleAnswer(this)">Er TechTjek gratis at bruge? &#x25BC;</div>
+      <div class="faq-answer">Ja! TechTjek tilbyder gratis undervisningsmateriale og værktøjer til lærere og elever.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleAnswer(this)">Hvordan logger jeg ind? &#x25BC;</div>
+      <div class="faq-answer">Du kan logge ind ved at klikke på 'Login' i menuen og indtaste dine oplysninger.</div>
+    </div>
+    
+    <button class="button" onclick="window.location.href='index.html'">Tilbage til forsiden</button>
+  </div>
+
+  <script>
+    function toggleAnswer(element) {
+      const answer = element.nextElementSibling;
+      const isVisible = answer.style.display === "block";
+      document.querySelectorAll(".faq-answer").forEach(a => a.style.display = "none");
+      document.querySelectorAll(".faq-question").forEach(q => q.innerHTML = q.innerHTML.replace("▲", "▼"));
+      
+      if (!isVisible) {
+        answer.style.display = "block";
+        element.innerHTML = element.innerHTML.replace("▼", "▲");
+      }
+    }
+  </script>
+</body>
+<footer>
+    <p>&copy; 2025 Tech Tjek</p>
+    <p>
+      <a href="Kontakt.html">Kontakt</a> |
+      <a href="Faq.html">FAQ</a> |
+      <a href="OmOs.html">Om os</a>
+    </p>
+  </footer>
+</html>

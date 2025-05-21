@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-Hjælper – Tech-Tjek</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Styling for the confirmation pop-up */
+    .confirmation-popup {
+        display: none; /* Hidden by default */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+
+    .popup-content {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 10px;
+        text-align: center;
+        max-width: 400px;
+        width: 90%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .popup-content h2 {
+        font-size: 1.5rem;
+        color: #333;
+    }
+
+    .popup-content p {
+        font-size: 1rem;
+        color: #666;
+    }
+
+    .popup-content button {
+        background-color: #509d2a;
+        color: white;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+
+    .popup-content button:hover {
+        background-color: #407a1f;
+    }
+</style>
+  
+</head>
+<body>
+
+<header>
+  <h1>Tech Tjek</h1>
+  <p>Din hjælper til teknologiforståelse i folkeskolen</p>
+</header>
+<nav>
+  <a href="index.html">Forside</a>
+ <a href="Materiale.html">Undervisningsmateriale</a>
+ <a href="AiHjaelper.html">AI Hjælper</a>
+ <a href="Forum.html">Forum</a>
+ <a href="login.html">Login</a>
+
+
+</nav> 
+<main>
+
+</section>
+
+  <section class="helper-section">
+    <div class="helper-text">
+      <h2>Velkommen til AI Hjælperen</h2>
+      <p>
+        Velkommen til AI Hjælperen – din digitale assistent til undervisningsplanlægning! <br><br>
+Her kan du hurtigt og nemt generere skræddersyet undervisningsmateriale baseret på dine behov og ønsker. Udfyld formularen – så klarer vi resten for dig! 🚀
+      </p>
+      
+    </div>
+  
+    <div class="helper-img">
+      <img src="billeder/Robo.png" alt="AI hjælper illustration" />
+    </div>
+  </section>
+  <br>
+  <div class="form-container">
+    <form id="generate-form">
+        <div class="form-group">
+            <label for="fag">Fag:</label>
+            <select id="fag" required>
+                <option value="">Vælg fag</option>
+                <option>Dansk</option>
+                <option>Matematik</option>
+                <option>Samfundsfag</option>
+                <option>Billedkunst</option>
+                <option>Engelsk</option>
+                <option>Biologi</option>
+                <option>Historie</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="klassetrin">Klassetrin:</label>
+            <select id="klassetrin" required>
+                <option value="">Vælg klassetrin</option>
+                <option>4. klasse</option>
+                <option>5. klasse</option>
+                <option>6. klasse</option>
+                <option>7. klasse</option>
+                <option>8. klasse</option>
+                <option>9. klasse</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="emne">Emne:</label>
+            <select id="emne" required>
+                <option value="">Vælg emne</option>
+                <option>Sociale medier</option>
+                <option>Netværk</option>
+                <option>AI og etik</option>
+                <option>Big Data</option>
+                <option>Cyberkriminalitet</option>
+                <option>Filterbobler og ekkokamre</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="laengde">Længde:</label>
+            <select id="laengde" required>
+                <option value="">Vælg længde</option>
+                <option>1 uge</option>
+                <option>2 uger</option>
+                <option>3 uger</option>
+                <option>4 uger</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="struktur">Struktur:</label>
+            <select id="struktur" required>
+                <option value="">Vælg struktur</option>
+                <option>Projektforløb</option>
+                <option>Workshop</option>
+                <option>Temadag</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="beskrivelse">Beskriv dit undervisningselement:</label>
+            <textarea id="beskrivelse" placeholder="Skriv dine ønsker her..." required></textarea>
+        </div>
+        <button type="button" class="button" onclick="showConfirmation()">GENERÉR</button>
+    </form>
+</div>
+
+<!-- Pop-up confirmation message -->
+<div id="confirmation-popup" class="confirmation-popup">
+    <div class="popup-content">
+        <h2>Bekræftelse</h2>
+        <p>Materialet er blevet sendt til den e-mail, der er tilknyttet din konto.</p>
+        <button onclick="closePopup()">OK</button>
+    </div>
+</div>
+
+<script>
+  // Function to show the confirmation popup
+  function showConfirmation() {
+      document.getElementById('confirmation-popup').style.display = 'flex';
+  }
+
+  // Function to close the confirmation popup
+  function closePopup() {
+      document.getElementById('confirmation-popup').style.display = 'none';
+  }
+</script>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 Tech Tjek</p>
+  <p>
+    <a href="/Kontakt.html">Kontakt</a> |
+    <a href="/Faq.html">FAQ</a> |
+    <a href="/OmOs.html">Om os</a>
+  </p>
+</footer>
+
+</body>
+</html>

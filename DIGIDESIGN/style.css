@@ -1,0 +1,488 @@
+/* Grundlæggende styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400&display=swap');
+
+
+body {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #2eaf71;
+    color: #333;
+}
+
+header {
+    background: url('billeder/TT.png') center/cover no-repeat;
+    height: 350px; /* Juster højden efter behov */
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+header h1, header p {
+    display: none;
+}
+/* Navigation styling */
+nav {
+    background-color: #ffffff;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-color: #2eaf71;
+    border: 3px solid #2eaf71;
+    font-family: 'Poppins', sans-serif;
+  font-weight: 600; /* Juster til 400 eller 500 hvis det virker for tungt */
+}
+
+nav a {
+    text-decoration: none;
+    color: #2eaf71;
+    font-weight: bold;
+    margin: 0.5rem 1rem;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    transform: scale(1.15);
+    color: rgb(112, 224, 140);
+}
+nav a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #2eaf71;
+    transition: width 0.3s;
+    width: 0;
+}
+nav a:hover::after {
+    width: 100%;
+}
+
+
+
+/* Footer styling */
+footer {
+    background-color: rgb(255, 255, 255);
+    color: #2eaf71;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 3rem;
+}
+
+footer a {
+    color: #2eaf71;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main content styling */
+main {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Section styling */
+section {
+    margin-bottom: 2rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Button styling */
+.button {
+    background-color: #248254;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: rgb(84, 203, 84);
+}
+
+/* Image container styling */
+.image-container {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Form styling */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+}
+
+select, input[type="text"], textarea {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 100px;
+}
+
+/* Catalogue styling */
+.catalogue {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 300px;
+}
+
+.topic {
+    margin: 1rem 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.topic img {
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+}
+
+.topic span {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    background-color: rgba(0,0,0,0.6);
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Footer links */
+
+/* Login container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.login-box {
+    background-color: #f9f9f6;;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+
+h2 {
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Input styling */
+.input-container {
+    margin-bottom: 1.5rem;
+    text-align: left;
+    padding-right: 4ex;
+
+}
+
+.input-container input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+    margin: auto;
+}
+
+.input-container input:focus {
+    border-color: #248254;
+}
+
+.input-container label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    color: #333;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #2eaf71;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2eaf71
+}
+
+/* Extra links */
+.extra-links {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #509d2a;
+}
+
+.extra-links a {
+    text-decoration: none;
+    margin: 0 0.5rem;
+    color: #509d2a;
+}
+
+.extra-links a:hover {
+    text-decoration: underline;
+}
+
+.slider-container {
+    width: 100%;
+    height: 520px; /* Fast højde */
+    overflow: hidden;
+    position: relative;
+    background-color: white; /* Baggrund, hvis billederne ikke fylder hele arealet */
+    border-radius: 6px;
+}
+
+.slider-wrapper {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+
+.slider-dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.slider-dots button {
+    border: none;
+    width: 6px;
+    height: 6px;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: #e2e2e2;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slider-dots button.active {
+    background-color: green;
+}
+.slide img {
+    width: 100%;
+    height: 100%; /* Vælg den højde, du ønsker */
+    object-fit: cover; /* Beskærer billedet, så det passer uden at forvrænge */
+    display: block;
+}
+.slide a {
+    cursor: pointer;
+    display: block;
+}
+.helper-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 40px;
+    max-width: 1000px;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+  
+  .helper-text {
+    flex: 1 1 300px;
+  }
+  
+  .helper-img {
+    flex: 1 1 300px;
+    text-align: center;
+  }
+  
+  .helper-img img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 15px;
+  }
+  .slide {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+  }
+  
+  .slide.active {
+    opacity: 1;
+    position: relative;
+    pointer-events: auto;
+  }
+  .slider-dots {
+    z-index: 10;
+    position: relative;
+  }
+  .material-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    background-color: white;
+  }
+  
+  .material-card {
+    display: flex;
+    align-items: center;
+    background-color: white;   
+    
+    padding: 15px;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .material-card:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+  }
+  
+  .material-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 15px;
+    flex-shrink: 0;
+  }
+  
+  .material-info h3 {
+    margin: 0 0 8px;
+    font-size: 1.1rem;
+    color: #2eaf71;
+  }
+  
+  .material-info p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #2eaf71;
+  }
+  
+  /* Fjern standard knap styling */
+  .material-card:focus {
+    outline: none;
+  }
+  .material-section,
+.material-card,
+.material-info h3,
+.material-info p {
+  font-family: 'Poppins', sans-serif;
+}
+.forum-section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    max-width: 1000px;
+    margin: 40px auto;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .forum-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .forum-text {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .forum-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .forum-text h2::before {
+    content: "💬";
+    font-size: 1.5rem;
+  }
+  
+  .forum-text ul {
+    margin-top: 15px;
+    padding-left: 20px;
+  }
+  
+  .forum-text li {
+    margin-bottom: 8px;
+  }
+  
+  .forum-image {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+  }
+  
+  .forum-image img {
+    max-width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+  

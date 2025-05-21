@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Undervisningsmateriale - Tech Tjek</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #509d2a93;
+      color: #333;
+  }
+  header {
+      background-color: green;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+  }
+  header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+  }
+  main {
+display: flex;
+flex-wrap: wrap;
+justify-content: center; /* Centers the rows */
+gap: 20px;
+padding: 20px;
+max-width: 1000px; /* Optional: prevents the layout from stretching too far */
+margin: 0 auto; /* Center the main content horizontally */
+}
+
+.material-box {
+flex: 0 0 calc(33.333% - 20px); /* 3 per row, minus the gap */
+box-sizing: border-box;
+position: relative;
+height: 200px;
+border-radius: 8px;
+overflow: hidden;
+cursor: pointer;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease;
+}
+  section {
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border-radius: 8px;
+  }
+  .button {
+      background-color: green;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+      font-weight: bold;
+  }
+  .button:hover {
+      background-color: rgb(84, 203, 84);
+  }
+
+  .material-box:hover {
+    transform: scale(1.05);
+  }
+
+  .material-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+  }
+
+  .material-box .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  }
+
+  .material-box a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-decoration: none;
+  }
+  nav {
+    background-color: #ffffff;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  nav a {
+text-decoration: none;
+color: rgb(33, 126, 56);
+font-weight: bold;
+margin: 0.5rem 1rem;
+display: inline-block;
+transition: transform 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+transform: scale(1.15);
+color: rgb(67, 192, 99);
+}
+footer {
+      background-color: green;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      margin-top: 3rem;
+  }
+  footer a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+  }
+</style>  
+</head>
+<body>
+
+  <header>
+    <h1>Undervisningsmateriale</h1>
+
+  </header>
+  <nav>
+     <a href="DigiDes.html">Forside</a>
+    <a href="Materiale.html">Undervisningsmateriale</a>
+    <a href="AiHjaelper.html">AI Hjælper</a>
+    <a href="Forum.html">Forum</a>
+    <a href="login.html">Login</a>
+   
+
+  </nav>  
+<main>
+
+  <section class="material-box class-algorithms">
+    <a href="algoritmer.pdf" download>
+      <img src="billeder/ALGO.png" alt="Algorithms">
+      <div class="content">PDF: Introduktion til algoritmer</div>
+    </a>
+  </section>
+
+  <section class="material-box class-datasikkerhed">
+    <a href="https://www.youtube.com/" target="_blank">
+      <img src="billeder/DS.png" alt="Data Security">
+      <div class="content">Video: Datasikkerhed forklaret for børn</div>
+    </a>
+  </section>
+
+  <section class="material-box kodeeventyr">
+    <a href="courses/BigData.html">
+      <img src="billeder/DA.jpeg" alt="Big Data">
+      <div class="content">Big Data</div>
+    </a>
+  </section>
+
+  <section class="material-box class-python">
+    <a href="courses/SocialMedia.html" target="_blank">
+      <img src="billeder/SM.png" alt="Python Learning">
+      <div class="content">Sociale medier og digital trivsel</div>
+    </a>
+  </section>
+
+  <section class="material-box class-coding-basics">
+    <a href="" target="_blank">
+      <img src="billeder/NW.jpg" alt="Coding Basics">
+      <div class="content">Netværk og internetarkitektur</div>
+    </a>
+  </section>
+
+  <section class="material-box class-web-development">
+    <a href="https://www.freecodecamp.org/" target="_blank">
+      <img src="billeder/CC.png" alt="Web Development">
+      <div class="content">Cyberkriminalitet</div>
+    </a>
+  </section>
+
+  <section class="material-box class-math-basics">
+    <a href="" target="_blank">
+      <img src="billeder/FB.png" alt="Filter bubbles">
+      <div class="content">Filterbobler og ekkokamre</div>
+    </a>
+  </section>
+
+  <section class="material-box class-data-analysis">
+    <a href="https://www.coursera.org/courses?query=data%20analysis" target="_blank">
+      <img src="billeder/DD.jpg" alt="Data Analysis">
+      <div class="content">Dataanalyse</div>
+    </a>
+  </section>
+
+  <section class="material-box class-artificial-intelligence">
+    <a href="https://www.udemy.com/course/ai-for-everyone/" target="_blank">
+      <img src="billeder/AI.png" alt="Artificial Intelligence">
+      <div class="content">Kunstig Intelligens: En introduktion</div>
+    </a>
+  </section>
+
+  <section class="material-box class-cloud-computing">
+    <a href="https://www.aws.training/learn" target="_blank">
+      <img src="billeder/HT.jpg" alt="Cloud Computing">
+      <div class="content">Teknologiens historier</div>
+    </a>
+  </section>
+
+  <section class="material-box class-machine-learning">
+    <a href="https://www.coursera.org/learn/machine-learning" target="_blank">
+      <img src="billeder/DI.jpg" alt="Machine Learning">
+      <div class="content">Digitale identiteter</div>
+    </a>
+  </section>
+
+  <section class="material-box class-blockchain">
+    <a href="https://www.ibm.com/blockchain" target="_blank">
+      <img src="billeder/CT.png" alt="Blockchain">
+      <div class="content">Kritisk tænkning og fake news</div>
+    </a>
+  </section>
+
+  <section class="material-box class-internet-of-things">
+    <a href="https://www.iottechnology.com/" target="_blank">
+      <img src="billeder/IOT.png" alt="Internet of Things">
+      <div class="content">Internet of Things: Hvad er det?</div>
+    </a>
+  </section>
+
+  </main>
+
+  <script>
+    function goToHome() {
+      window.location.href = "Index.html"; // Sender brugeren tilbage til forsiden
+    }
+  </script>
+
+</body>
+<footer>
+    <p>&copy; 2025 Tech Tjek</p>
+    <p>
+      <a href="Kontakt.html">Kontakt</a> |
+      <a href="Faq.html">FAQ</a> |
+      <a href="OmOs.html">Om os</a>
+    </p>
+  </footer>
+</html>
+

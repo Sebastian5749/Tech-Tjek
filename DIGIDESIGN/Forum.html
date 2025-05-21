@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Forum - Tech Tjek</title>
+  <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+  <header>
+    <h1>Tech Tjek Forum</h1>
+    <p>Del erfaringer og stil spørgsmål</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Forside</a>
+   <a href="Materiale.html">Undervisningsmateriale</a>
+   <a href="AiHjaelper.html">AI Hjælper</a>
+   <a href="Forum.html">Forum</a>
+   <a href="login.html">Login</a>
+  
+
+ </nav>
+  <main>
+    <h2>Diskussionstråde</h2>
+    <ul class="thread-list">
+      <li>💡 Hvordan arbejder I med AI i billedkunst?</li>
+      <li>📚 Gode materialer til 4. klasse?</li>
+      <li>🎮 Spil til at forklare algoritmer?</li>
+      <li>🔐 Hvordan underviser I i datasikkerhed?</li>
+    </ul>
+
+    <h2>Opret en ny tråd</h2>
+    <form id="forum-form">
+      <div class="form-group">
+        <label for="thread-title">Emne:</label>
+        <input type="text" id="thread-title" placeholder="Skriv emne for din tråd..." required />
+      </div>
+      <div class="form-group">
+        <label for="thread-content">Besked:</label>
+        <textarea id="thread-content" rows="4" placeholder="Skriv din besked..." required></textarea>
+      </div>
+      <button type="submit" class="button">Opret tråd</button>
+    </form>
+    <br>
+    <button class="button back-button" onclick="goBack()">⬅ Gå til forside</button>
+  </main>
+
+  <script>
+    function goBack() {
+      window.location.href = "index.html"; // Sender brugeren tilbage til hovedsiden
+    }
+
+    document.getElementById("forum-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const title = document.getElementById("thread-title").value;
+      const content = document.getElementById("thread-content").value;
+
+      if (title && content) {
+        alert("Din tråd er oprettet: " + title);
+        document.getElementById("thread-title").value = "";
+        document.getElementById("thread-content").value = "";
+      }
+    });
+  </script>
+
+</body>
+<footer>
+    <p>&copy; 2025 Tech Tjek</p>
+    <p>
+      <a href="Kontakt.html">Kontakt</a> |
+      <a href="Faq.html">FAQ</a> |
+      <a href="OmOs.html">Om os</a>
+    </p>
+  </footer>
+</html>

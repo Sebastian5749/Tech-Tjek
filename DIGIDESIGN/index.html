@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tech Tjek - Teknologiforståelse i Folkeskolen</title>
+  <link rel="stylesheet" href="style.css">
+
+ <!-- AOS stylesheet -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+  <header>
+    <h1>Tech Tjek</h1>
+    <p>Din hjælper til teknologiforståelse i folkeskolen</p>
+  </header>
+  <nav>
+     <a href="index.html">Forside</a>
+    <a href="Materiale.html">Undervisningsmateriale</a>
+    <a href="AiHjaelper.html">AI Hjælper</a>
+    <a href="Forum.html">Forum</a>
+    <a href="login.html">Login</a>
+   
+
+  </nav>
+  <main>
+    <div class="slider-container">
+      <div class="slider-wrapper" id="slider-wrapper">
+        <div class="slide active">
+          <a href="Forum.html" target="_blank"></a>
+          <img src="billeder/Bazaart2.jpeg" alt="Billede 1">
+        </a>
+        </div>
+        <div class="slide">
+          <a href="Forum.html" target="_blank">
+          <img src="billeder/Bazaart.jpeg" alt="Billede 2">
+          </a>
+        </div>
+        <div class="slide">
+          <img src="billeder/Bazaart3.jpeg" alt="Billede 3">
+        </div>
+      </div>
+      <!-- Navigation prikker -->
+      <div class="slider-dots" id="slider-dots"></div>
+    </div>
+    
+<!-- Fly-in Animation Box -->
+<div class="clickable-flyin fly-in" onclick="window.location.href='AiHjaelper.html'">
+  Brug AI Hjælper 
+  <br>til at sammensætte
+  <br> undervisningsmateriale!
+</div>
+
+<!-- Fly-in Animation Script -->
+<style>
+  /* CSS for the fly-in animation */
+  .fly-in {
+      animation: flyIn 1s ease-out forwards;
+  }
+
+  @keyframes flyIn {
+      from {
+          transform: translateX(100%); /* Start udenfor skærmen til højre */
+          opacity: 0;
+      }
+      to {
+          transform: translateX(0); /* Stop ved højre side af skærmen */
+          opacity: 1;
+      }
+  }
+
+  /* Styling for the clickable box */
+  .clickable-flyin {
+      position: fixed; /* Fixet på siden, så den bliver i højre side */right: 20px; /* Placering til højre */
+      padding: 20px;
+      background-color: #248254;
+      color: rgb(255, 255, 255);
+      border-radius: 5%; /* Rund boks */
+      font-weight: bold;
+      cursor: pointer;
+      top: 430px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Let skygge */
+    ;
+  }
+  .clickable-flyin:hover {
+      background-color: rgb(112, 224, 140);
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+  }
+</style>
+<br>
+<br>
+</style>
+<section class="material-section">
+  <h2>🎒 Undervisningsmateriale</h2>
+  <p>Orientér dig, i vores katalog over materiale</p>
+
+  <div class="material-grid">
+
+    <button class="material-card">
+      <img src="billeder/AL.png" alt="Algoritmer illustration">
+      <div class="material-info">
+        <h3>Introduktion til algoritmer</h3>
+        <p>PDF-materiale der introducerer begrebet algoritmer på et børnevenligt sprog.</p>
+      </div>
+    </button>
+
+    <button class="material-card">
+      <img src="billeder/SH.png" alt="Datasikkerhed illustration">
+      <div class="material-info">
+        <h3>Datasikkerhed for børn</h3>
+        <p>Forklarende video om digital sikkerhed, målrettet folkeskolen.</p>
+      </div>
+    </button>
+
+    <button class="material-card">
+      <img src="billeder/JS.png" alt="Spil illustration">
+      <div class="material-info">
+        <h3>Kodeeventyret</h3>
+        <p>Et interaktivt spil, hvor eleverne lærer grundlæggende programmering.</p>
+      </div>
+    </button>
+
+    <button class="material-card">
+      <img src="billeder/LP.png" alt="Lektionsplan illustration">
+      <div class="material-info">
+        <h3>AI i samfundsfag</h3>
+        <p>Færdig lektionsplan med opgaver og forslag til forløb om AI.</p>
+      </div>
+    </button>
+
+  </div>
+</section>
+
+
+   
+
+<section class="forum-section">
+  <div class="forum-content">
+    <div class="forum-text">
+      <h2>Forum</h2>
+      <p>Stil spørgsmål eller del erfaringer med andre undervisere.</p>
+      <ul>
+        <li><strong>Hvordan arbejder I med AI i billedkunst?</strong></li>
+        <li>Gode materialer til 4. klasse?</li>
+        <li>Spil til at forklare algoritmer?</li>
+      </ul>
+    </div>
+    <div class="forum-image">
+      <img src="billeder/Nforside.jpg" alt="Børn arbejder på computer">
+    </div>
+  </div>
+</section>
+
+
+
+    <section id="login">
+      <h2>Login</h2>
+      <p>Log ind for at gemme dine læringsplaner og deltage i forum.</p>
+      <a href="Login.html"><button class="button">Log ind</button></a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Tech Tjek</p>
+    <p>
+      <a href="Kontakt.html">Kontakt</a> |
+      <a href="Faq.html">FAQ</a> |
+      <a href="OmOs.html">Om os</a>
+    </p>
+  </footer>
+  <!-- AOS script -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script>
+  let slideIndex = 0;
+const slides = document.querySelectorAll(".slide");
+const dotsContainer = document.getElementById("slider-dots");
+
+// Opret prikker
+slides.forEach((_, i) => {
+  const dot = document.createElement("button");
+  dot.addEventListener("click", () => showSlide(i));
+  dotsContainer.appendChild(dot);
+});
+
+const dots = dotsContainer.querySelectorAll("button");
+
+function showSlide(index) {
+  slideIndex = index;
+
+  slides.forEach((slide, i) => {
+    slide.classList.toggle("active", i === index);
+  });
+
+  dots.forEach((dot, i) => {
+    dot.classList.toggle("active", i === index);
+  });
+}
+
+// Automatisk skift
+function autoSlide() {
+  slideIndex = (slideIndex + 1) % slides.length;
+  showSlide(slideIndex);
+}
+
+showSlide(slideIndex);
+setInterval(autoSlide, 5000); // Skift hvert 5. sekund
+
+  </script>
+ 
+  
+</body>
+</html>
